@@ -1,0 +1,29 @@
+
+<html>
+<head>
+<script src="angular.js"></script>
+<script>
+	var routeMod = angular.module("myrouteApp", []);
+	routeMod.controller("myctrl", function($http, $log, $scope, $timeout) {
+
+		function add(x, y) {
+			return $timeout(function() {
+				return x + y;
+			}, 100);
+		}
+
+		var startTime = Date.now();
+
+		add(5, 2).then(function(result) {
+			return add(result, 3)
+		}).then(function(result) {
+			$scope.result = result;
+		});
+
+	});
+</script>
+</head>
+<body>
+	<div ng-app="myrouteApp" ng-controller="myctrl"></div>
+</body>
+</html>
