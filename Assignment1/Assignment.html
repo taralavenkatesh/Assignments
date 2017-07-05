@@ -49,7 +49,7 @@
 				</tr>
 				<tr>
 					<td>Enter Sub1 Marks</td>
-					<td><input type="text" name="marks1" ng-model='marks1'
+					<td><input type="number" name="marks1" ng-model='marks1' min="0" max="3"
 						ng-required="!disabled" ng-disabled="disabled" ng-maxlength="3" /></td>
 					<td><p
 							ng-show="showMsgs && (myform.marks1.$error.required || !myform.marks1.$valid)">This
@@ -57,7 +57,7 @@
 				</tr>
 				<tr>
 					<td>Enter Sub2 Marks</td>
-					<td><input type="text" name="marks2" ng-model='marks2'
+					<td><input type="number" name="marks2" ng-model='marks2' min="0" max="3"
 						ng-required="!disabled" ng-disabled="disabled" ng-maxlength="3" /></td>
 					<td><p
 							ng-show="showMsgs && (myform.marks2.$error.required || !myform.marks2.$valid)">This
@@ -65,7 +65,7 @@
 				</tr>
 				<tr>
 					<td>Enter Sub3 Marks</td>
-					<td><input type="text" name="marks3" ng-model='marks3'
+					<td><input type="number" name="marks3" ng-model='marks3' min="0" max="3"
 						ng-required="!disabled" ng-disabled="disabled" ng-maxlength="3" /></td>
 					<td><p
 							ng-show="showMsgs && (myform.marks3.$error.required || !myform.marks3.$valid)">This

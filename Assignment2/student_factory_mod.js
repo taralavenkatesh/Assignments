@@ -33,6 +33,21 @@ studentFact.factory('studentFactPromise', function($log,$q,$http) {
 		return deferred.promise;	
 	}
 
+	
+	
+	fact2.getStudentData = function(id) {        
+		var deferred = $q.defer();        
+		$http.get('http://localhost:3000/student/')
+		.then(function(response){
+			$log.debug(response.data);
+			deferred.resolve(response.data);
+		})
+		.catch(function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;	
+	}
+	
 
 	fact2.deleteStudentById = function(id) {        
 		var deferred = $q.defer();        
